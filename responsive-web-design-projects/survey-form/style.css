@@ -1,0 +1,49 @@
+.TAG {
+    border: 1px solid red;
+}
+
+/* >>>>>>>>>>>>>>>>>>> HEADER <<<<<<<<<<<<<<<<<<<<< */
+#title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* >>>>>>>>>>>>>>>>>>> FORM FRAME <<<<<<<<<<<<<<<<<<<<< */
+.form-frame {
+    background-color: #fafafa;
+    padding: 20px;
+}
+
+
+#description {
+    font-size: 16px;
+}
+
+/* ------------- Survey Form ----------- */
+.form-title{
+    margin-top: 35px;
+    padding-left: 0px !important;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(222, 226, 230);
+}
+
+.label {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 450;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.radio-padding {
+    padding-left: 20px;
+}
+
+/* >>>>>>>>>>>>>>>>>>> FOOTER <<<<<<<<<<<<<<<<<<<<< */
+.footer {
+    height: 30px;
+}

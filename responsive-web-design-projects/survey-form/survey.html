@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <title>Survey Form - FCC Challange 02</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Title -->
+<header class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 id="title">Survey Form</h1>
+        </div>
+    </div>
+</header>
+
+<!-- Form -->
+<section class="container border rounded form-frame">
+    <!-- Description -->
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <p class="label" id="description">Let us know how can we improve...</p>
+        </div>
+    </div>
+
+    <form  id="survey-form">
+        <!-- Personal Info -->
+        <h5 class="form-title col-xl-5 col-lg-6 col-md-12">Personal Info</h5>
+        <div class="form-group">
+            <label class="label" id="name-label" for="name">Name:</label>
+            <input class="form-control form-control-sm col-xl-5 col-lg-6 col-md-12 input" type="text" id="name" placeholder="Entre your name" required>
+        </div>
+        <div class="form-group">
+            <label class="label" id="email-label" for="email">E-mail:</label>
+            <input class="form-control form-control-sm col-xl-5 col-lg-6 col-md-12 input" type="email"  id="email" placeholder="Enter your e-mail" required>
+        </div>
+        <div class="form-group">
+            <label class="label" id="number-label" for="number">Age:</label>
+            <input class="form-control form-control-sm col-xl-1 col-lg-1 col-md-2 col-sm-2 col-3 input" type="number" id="number" min="1" max="100" placeholder="Age">
+        </div>
+
+        <!-- Personal Info -->
+        <h5 class="form-title col-xl-5 col-lg-6 col-md-12">Preferences</h5>
+        <div class="label">
+            What do you like most in FCC?
+        </div>
+        <select class="custom-select custom-select-sm col-xl-2 col-lg-2 col-md-3 col-sm-4 col-5 input" id="dropdown">
+            <option selected>Select an option</option>
+            <option>Challanges</option>
+            <option>Projects</option>
+            <option>Community</option>
+            <option>Open Source</option>
+        </select>
+
+        <div class="label">
+            What IDE do you use?
+        </div>
+        <div class="input">
+            <div class="custom-control form-control-sm custom-radio">
+                <input type="radio" id="Radio1" name="Radio" class="custom-control-input" value="1">
+                <label class="custom-control-label" for="Radio1">WebStorm</label>
+            </div>
+            <div class="custom-control form-control-sm custom-radio">
+                <input type="radio" id="Radio2" name="Radio" class="custom-control-input" value="2">
+                <label class="custom-control-label" for="Radio2">VS Code</label>
+            </div>
+            <div class="custom-control form-control-sm custom-radio">
+                <input type="radio" id="Radio3" name="Radio" class="custom-control-input" value="3">
+                <label class="custom-control-label" for="Radio3">Atom</label>
+            </div>
+            <div class="custom-control form-control-sm custom-radio">
+                <input type="radio" id="Radio4" name="Radio" class="custom-control-input" value="4">
+                <label class="custom-control-label" for="Radio4">Sublime</label>
+            </div>
+            <div class="custom-control form-control-sm custom-radio">
+                <input type="radio" id="Radio5" name="Radio" class="custom-control-input" value="5">
+                <label class="custom-control-label" for="Radio5">Vim</label>
+            </div>
+            <div class="custom-control form-control-sm custom-radio">
+                <input type="radio" id="Radio6" name="Radio" class="custom-control-input" value="6">
+                <label class="custom-control-label" for="Radio6">Emacs</label>
+            </div>
+            <div class="custom-control form-control-sm custom-radio">
+                <input type="radio" id="Radio7" name="Radio" class="custom-control-input" value="7">
+                <label class="custom-control-label" for="Radio7">Other</label>
+            </div>
+        </div>
+
+        <div class="label">
+            Things that should be improved in the future <br>
+            <small>(Check all that apply):</small>
+        </div>
+        <div class="input">
+            <div class="custom-control form-control-sm custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="Check1" value="1">
+                <label class="custom-control-label" for="Check1">Front-end Projects</label>
+            </div>
+            <div class="custom-control form-control-sm custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="Check2" value="2">
+                <label class="custom-control-label" for="Check2">Back-end Projects</label>
+            </div>
+            <div class="custom-control form-control-sm custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="Check3" value="3">
+                <label class="custom-control-label" for="Check3">Data Visualization</label>
+            </div>
+            <div class="custom-control form-control-sm custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="Check4" value="4">
+                <label class="custom-control-label" for="Check4">Challanges</label>
+            </div>
+            <div class="custom-control form-control-sm custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="Check5" value="5">
+                <label class="custom-control-label" for="Check5">Open Source Community</label>
+            </div>
+            <div class="custom-control form-control-sm custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="Check6" value="6">
+                <label class="custom-control-label" for="Check6">Videos</label>
+            </div>
+            <div class="custom-control form-control-sm custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="Check7" value="7">
+                <label class="custom-control-label" for="Check7">City Meetups</label>
+            </div>
+            <div class="custom-control form-control-sm custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="Check8" value="8">
+                <label class="custom-control-label" for="Check8">Forum</label>
+            </div>
+        </div>
+
+        <div class="form-group form-control-sm col-xl-5 col-lg-6 col-md-12">
+            <label class="label" for="Textarea1">Any comments or suggestions?</label>
+            <textarea class="form-control form-control-sm input" id="Textarea1" rows="4"></textarea>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary btn-sm" id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</section>
+
+<footer class="row footer">
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+</html>
