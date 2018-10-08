@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Page Landing - FCC Challange 02</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <header class="navbar navbar-dark bg-dark" id="header" role="navigation">
+        <div class="container">
+            <a href="https://www.tensorflow.org/" class="navbar-brand">
+                <img src="images/logo.png" id="header-img">
+                TensorFlow
+            </a>
+            <nav id="nav-bar">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a href="#banner" class="nav-link nav-button space">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#features" class="nav-link space">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#documentation" class="nav-link space">Documentation</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="container" id="banner" name="banner">
+        <div class="row" id="headlight">
+            <div class="col">
+                <h2 class="display-4" id="headlight-title">An open source machine learning library
+                    for research and production.</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/mWl45NkFBOc?rel=0&amp;controls=0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <div class="col headlight-about">
+                <h4 name="about">About TensorFlow</h4>
+                <p>TensorFlow™ is an open source software library for high performance numerical computation. Its
+                    flexible architecture allows easy deployment of computation across a variety of platforms (CPUs,
+                    GPUs, TPUs), and from desktops to clusters of servers to mobile and edge devices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" name="features">
+        <div class="container">
+            <div class="row">
+                <article class="col-4 box">
+                    <div class="text-center">
+                        <i class="fas fa-fighter-jet fa-5x icon-position"></i>
+                    </div>
+                    <h5>Fast</h5>
+                    <p>Performance is essential when creating and deploying machine learning systems. For this reason
+                        TensorFlow includes XLA, a powerful linear algebra compiler that speeds up the execution of
+                        TensorFlow code on processors, CPUs, GPUs, TPUs, and other embedded hardware platforms.</p>
+                </article>
+
+
+                <article class="col-4 box">
+                    <div class="text-center">
+                        <i class="fas fa-child fa-5x icon-position"></i>
+                    </div>
+                    <h5>Flexible</h5>
+                    <p>TensorFlow provides high-level APIs that facilitate the creation and training of your models as
+                        well as low-level control for maximum flexibility and performance.</p>
+                </article>
+
+
+
+                <article class="col-4 box">
+                    <div class="text-center">
+                        <i class="fas fa-angle-double-right fa-5x icon-position"></i>
+                    </div>
+                    <h5>Ready for production</h5>
+                    <p>TensorFlow can be used in exploratory research and even in large-scale production. You can use
+                        the same TensorFlow APIs in a variety of areas, whether creating a new model type or processing
+                        millions of requests during production.</p>
+                </article>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Input  -->
+    <section class="box-container" id="documentation" name="documentation">
+        <div id="box-1">
+        </div>
+
+        <div id="box-2">
+            <div id="container-2">
+                <div id="inside-box-1">
+                    <h4>Get more information</h4>
+                    <p>Enter your email and recieve the latest news about our releases</p>
+                </div>
+
+                <div id="inside-box-2">
+                    <form action="https://www.freecodecamp.com/email-submit" id="form">
+                        <input type="email" name="email" id="email" size="35" placeholder="Enter yout email" required>
+                        <input class="btn btn-primary btn-sm" type="submit" id="submit" value="Sign in">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="box-3">
+        </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer id="footer">
+
+        <p class="text-center" id="text">
+            Visit offcial TensorFlow website.
+        </p>
+
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
