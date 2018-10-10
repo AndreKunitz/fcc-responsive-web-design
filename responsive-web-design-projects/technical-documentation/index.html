@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <title>Technical Documentation Page - FCC Challange 04</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark fixed-top shadow">
+        <a class="navbar-brand" href="">
+            <img src="images/spring-logo.png" alt="logo" id="brand-img">
+            Spring
+        </a>
+    </nav>
+    
+<div class="row">
+
+    <div class="col-lg-2" id="nav-div">
+        <nav class="nav flex-column" id="navbar">
+            <header id="header-title">Table of contents</header>
+            <a class="nav-link" href="#Building_a_RESTful_Web_Service">Building a RESTful Web Service</a>
+            <a class="nav-link" href="#What_you’ll_build">What you’ll build</a>
+            <a class="nav-link" href="#What_you’ll_need">What you’ll need</a>
+            <a class="nav-link" href="#How_to_complete_this_guide">How to complete this guide</a>
+            <a class="nav-link" href="#Create_a_resource_representation_class">Create a resource representation class</a>
+            <a class="nav-link" href="#More...">More...</a>        
+        </nav>
+    </div>
+
+    <div class="col-lg-10">
+        <main id="main-doc">
+            <section class="main-section" id="Building_a_RESTful_Web_Service">
+                    <header><h4>Building a RESTful Web Service</h4></header>
+                    <hr>
+
+                    <p>This guide walks you through the process of creating a "hello world" RESTful web service with Spring.</p>
+            </section>
+
+            <section class="main-section" id="What_you’ll_build">
+                    <header><h5>What you’ll build</h5></header>
+                    <hr>
+
+                    <p>You’ll build a service that will accept HTTP GET requests at:</p>
+
+                    <div class="code"><code>http://localhost:8080/greeting</code></div>    
+                    
+                    <p>and respond with a JSON representation of a greeting:</p>
+
+                    <div class="code"><code>{"id":1,"content":"Hello, World!"}</code></div>
+
+                    <p>You can customize the greeting with an optional <span class="attribute">name</span> parameter in the query string:</p>
+
+                    <div class="code"><code>http://localhost:8080/greeting?name=User</code></div>
+
+                    <p>The <span class="attribute">name</span> parameter value overrides the default value of "World" and is reflected in the response:</p>
+
+                    <div class="code"><code>{"id":1,"content":"Hello, User!"}</code></div>
+            </section>
+            
+            <section class="main-section" id="What_you’ll_need">
+                    <header><h5>What you’ll need</h5></header>
+                    <hr>
+                    
+                    <p>   
+                    <ul>
+                        <li>About 15 minutes</li>
+                        <li>A favorite text editor or IDE</li>
+                        <li>JDK 1.8 or later</li>
+                        <li>Gradle 4+ or Maven 3.2+</li>
+                        <li>You can also import the code straight into your IDE:</li>
+                        <ul>
+                            <li>Spring Tool Suite (STS)</li>
+                            <li>IntelliJ IDEA</li>
+                        </ul>
+                    </ul>
+                    </p> 
+            </section>
+
+            <section class="main-section" id="How_to_complete_this_guide">
+                    <header><h5>How to complete this guide</h5></header>
+                    <hr>
+                    
+                    <p>Like most Spring Getting Started guides, you can start from scratch and complete each step, or you can bypass basic setup steps that are already familiar to you. Either way, you end up with working code.</p>
+
+                    <p>To start from scratch, move on to Build with Gradle.</p>
+
+                    <p>To skip the basics, do the following:</p>
+
+                    <ul>
+                        <li>Download and unzip the source repository for this guide, or clone it using Git: 
+                        <div class="code"><code>git clone https://github.com/spring-guides/gs-rest-service.git</code></div>
+                        </li>
+                        <li>cd into 
+                        <div class="code"><code>gs-rest-service/initial</code></div>
+                        </li>
+                        <li>Jump ahead to Create a resource representation class.</li>
+                    </ul>
+
+                    <p>When you’re finished, you can check your results against the code in </p>
+
+                    <div class="code"><code>gs-rest-service/complete</code></div>
+            </section>
+
+            <section class="main-section" id="Create_a_resource_representation_class">
+                    <header><h5>Create a resource representation class</h5></header>
+                    <hr>
+                    
+                    <p>Now that you’ve set up the project and build system, you can create your web service.</p>
+
+                    <p>Begin the process by thinking about service interactions.</p>
+
+                    <p>The service will handle <span class="attribute">GET</span> requests for <span class="attribute">/greeting</span>, optionally with a <span class="attribute">name</span> parameter in the query string. The <span class="attribute">GET</span> request should return a <span class="attribute">200 OK</span> response with JSON in the body that represents a greeting. It should look something like this:</p>
+
+                    <div class="code">
+                    <code>
+                        {<br>
+                         &nbsp&nbsp&nbsp&nbsp   "id": 1,<br>
+                         &nbsp&nbsp&nbsp&nbsp   "content": "Hello, World!"
+                        <br>}
+                    </code>
+                    </div>
+
+                    <p>The <span class="attribute">id</span> field is a unique identifier for the greeting, and content is the textual representation of the greeting.</p>
+
+                    <p>To model the greeting representation, you create a resource representation class. Provide a plain old java object with fields, constructors, and accessors for the <span class="attribute">id</span> and <span class="attribute">content</span> data:</p>
+
+                    <div class="code"><code>
+                        package hello;<br>
+                        <br>
+                        public class Greeting {<br>
+                            <br>
+                        &nbsp&nbsp    private final long id;<br>
+                        &nbsp&nbsp    private final String content;<br>
+                            <br>
+                        &nbsp&nbsp    public Greeting(long id, String content) {<br>
+                        &nbsp&nbsp&nbsp&nbsp        this.id = id;<br>
+                        &nbsp&nbsp&nbsp&nbsp        this.content = content;<br>
+                        &nbsp&nbsp     } <br>
+                            <br>
+                        &nbsp&nbsp    public long getId() { <br>
+                        &nbsp&nbsp&nbsp&nbsp        return id; <br>
+                        &nbsp&nbsp    } <br>  
+                            <br>
+                        &nbsp&nbsp    public String getContent() { <br>
+                        &nbsp&nbsp&nbsp&nbsp        return content; <br>
+                        &nbsp&nbsp    } <br>
+                        }
+                    </code></div>
+
+                    <p>As you see in steps below, Spring uses the Jackson JSON library to automatically marshal instances of type <span class="attribute">Greeting</span> into JSON.</p>
+
+                    <p>Next you create the resource controller that will serve these greetings.</p>
+
+                    <div class="code"><code>one last code to finish</code></div>
+            </section>
+
+            <section class="main-section" id="More...">
+                    <header><h5>More...</h5></header>
+                    <hr>
+                    
+                    <p>For continuing this guide, please visit the link below:</p>
+
+                    <div class="code"><code><a href="https://spring.io/guides/gs/rest-service/">https://spring.io/guides/gs/rest-service/</a></code></div>
+            </section>
+            <br>
+            <br>    
+            <br>
+
+        </main>
+    </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+</html>

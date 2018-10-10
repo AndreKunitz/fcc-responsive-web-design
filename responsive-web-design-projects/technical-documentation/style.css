@@ -1,0 +1,72 @@
+body {
+	overflow-x: hidden;
+}
+
+h4, h5 {
+	padding-top: 25px;
+}
+
+p, hr {
+	margin-right: 30px;
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+.navbar-brand {
+	font-weight: 700;
+}
+
+#brand-img {
+	height: 25px;
+	padding-bottom: 3px;
+	padding-right: 5px;
+}
+
+#navbar {
+	padding-top: 80px;
+	padding-left: 20px;
+	height: auto;
+}
+
+#header-title {
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+#main-doc {
+	position: fixed;
+	overflow-y: auto;
+	padding-top: 55px;
+	padding-left: 20px;
+	height: 100vh;
+
+}
+
+.code {
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-bottom: 15px;
+	margin-right: 30px;
+	padding: 5px 15px 5px 15px;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+}
+
+.attribute {
+	background-color: #fafafa;
+	border: 1px solid #b3e5fc;
+	color: #0091ea;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 1px;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+@media screen and (max-width: 992px) {
+	#nav-div {
+		display: none;
+	}
+}
