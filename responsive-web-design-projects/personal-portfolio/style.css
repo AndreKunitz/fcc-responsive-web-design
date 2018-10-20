@@ -1,0 +1,85 @@
+#navbar {
+    background-color: #141422;
+}
+
+nav>a {
+    color: #f9efc1;
+    font-weight: 600;
+}
+
+nav>a:hover {
+    color: #d8c13a; 
+}
+
+
+#welcome-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    background-color: #141422;
+    height: 100vh;
+}
+
+#name {
+    color: white;
+}
+
+#description {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #00ffe0;
+}
+
+.title {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; 
+}
+
+.card {
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+.project-tile  {
+    height: 300px;
+}
+
+.flex-container {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 180px; 
+}
+
+.icon {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.foot {
+    background-color: #141422;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.end {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+    #description {
+        font-size: 16px;
+    }
+}
